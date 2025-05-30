@@ -90,7 +90,7 @@ def show_map():
     presigned_url = s3.generate_presigned_url(
         'get_object',
         Params={'Bucket': BUCKET_NAME, 'Key': OBJECT_KEY},
-        ExpiresIn=600  # 10 minutes
+        ExpiresIn=2700  # 10 minutes
     )
     return redirect(presigned_url)
 
